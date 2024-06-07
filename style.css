@@ -62,9 +62,8 @@ main {
     text-align: center;
 }
 
-.imagine-mijloc {
-    width: 100%;
-    max-width: 400px;
+.img-responsive {
+    max-width: 100%;
     height: auto;
 }
 
