@@ -67,10 +67,6 @@ main {
     height: auto;
 }
 
-.imagine-mijloc {
-    width: 100%;
-    max-width: 400px;}
-
 form {
     width: 80%;
     max-width: 400px;
@@ -124,7 +120,7 @@ footer {
     position: fixed;
     bottom: 0;
 }
-
+/*
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
@@ -133,4 +129,30 @@ footer {
         margin: 10px 0;
     }
 }
+*/  
 
+
+/* CSS pentru structurarea responsivă a informațiilor */
+#footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .side-info {
+    flex: 1 1 20%; /* Ocupă 20% din lățimea container-ului */
+    min-width: 150px; /* Lățimea minimă pentru coloane laterale */
+  }
+  
+  .main-info {
+    flex: 3 1 60%; /* Ocupă 60% din lățimea container-ului */
+    min-width: 300px; /* Lățimea minimă pentru coloana centrală */
+  }
+  
+  @media (max-width: 768px) {
+    .side-info, .main-info {
+      flex: 1 1 100%; /* Fiecare element ocupă 100% din lățimea container-ului pe ecrane mici */
+    }
+  }
+
+  
