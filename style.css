@@ -67,6 +67,10 @@ main {
     height: auto;
 }
 
+.imagine-mijloc {
+    width: 100%;
+    max-width: 400px;}
+
 form {
     width: 80%;
     max-width: 400px;
