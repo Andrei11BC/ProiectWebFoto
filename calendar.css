@@ -1,0 +1,205 @@
+body {
+    font-family: 'Great Vibes', cursive, Arial, sans-serif;
+    background-color: #f5f5dc; /* Crem */
+    margin: 0;
+    padding: 0;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+#content_container {
+    width: 30%;
+    height: 50%;
+    
+}
+
+#form_container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    box-shadow: 0 0 50px -20px #000;
+    border-radius: 2%;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#form_header_container {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+
+#form_header {
+    display: inline-block;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+#form_content_container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+#form_content_inner_container {
+    width: 75%;
+    height: 100%;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #000; /* Culoare neagră pentru text */
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
+#button_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#button_container button {
+    width: 48%; /* Ajustează lățimea butoanelor pentru a avea spațiu între ele */
+    height: 50px;
+    background: transparent;
+    color: inherit;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #a39375;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Pentru un efect de hover */
+}
+
+#button_container button:hover {
+    background-color: #a39375;
+    color: #fff;
+}
+
+
+header {
+    width: 100%;
+    background-color: #d5c4a1;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #a39375;
+}
+
+header .antet-imagine {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #6b4f4f;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: #a39375;
+    color: #fff;
+}
+
+footer {
+    width: 100%;
+    background-color: #d5c4a1;
+    color: #6b4f4f;
+    text-align: center;
+    padding: 1em;
+    border-top: 2px solid #a39375;
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+#calendar {
+    font-family: Arial, sans-serif;
+    width: 80%; /* Lățimea calendarului va fi de 80% din lățimea ecranului */
+    max-width: 1100px;
+    margin: 0 auto; /* Afișează calendarul centralizat pe ecran */
+    background-color: #fff; /* Fundal alb */
+    margin-top: 10%; /* Margin top de 10% pentru a menține o distanță de la partea de sus a ecranului */
+    margin-bottom: 10%; /* Margin bottom de 10% pentru a menține o distanță de la partea de jos a ecranului */
+    border-radius: 20px; /* Rotunjirea colțurilor */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Umbră pentru adâncime */
+    overflow: hidden; /* Asigură că conținutul nu depășește marginea calendarului */
+}
+
+.modal-wrapper {
+    position: fixed; /* Menține modalul fix pe ecran */
+    z-index: 9999;
+    top: 50%; /* Afișează modalul la jumătatea verticală a ecranului */
+    left: 50%; /* Afișează modalul la jumătatea orizontală a ecranului */
+    transform: translate(-50%, -50%); /* Centrează modalul pe ecran */
+    width: 80%; /* Lățimea modalului va fi de 80% din lățimea ecranului */
+    max-width: 600px; /* Lățimea maximă a modalului */
+    background-color: #fff; /* Fundal alb pentru modal */
+    border-radius: 10px; /* Rotunjirea colțurilor */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Umbră pentru adâncime */
+}

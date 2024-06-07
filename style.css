@@ -1,0 +1,133 @@
+body {
+    font-family: 'Great Vibes', cursive, Arial, sans-serif;
+    background-color: #f5f5dc; /* Crem */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background-color: #d5c4a1;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #a39375;
+}
+
+header .antet-imagine {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #6b4f4f;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: #a39375;
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.imagine-mijloc {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+form {
+    width: 80%;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #faf0e6;
+    padding: 20px;
+    border: 1px solid #d5c4a1;
+    border-radius: 10px;
+}
+
+footer {
+    width: 100%;
+    background-color: #d5c4a1;
+    color: #6b4f4f;
+    text-align: center;
+    padding: 1em;
+    border-top: 2px solid #a39375;
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
