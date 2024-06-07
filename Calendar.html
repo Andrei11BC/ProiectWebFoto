@@ -9,15 +9,32 @@
     <script src="JavaScript.js" defer></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
     <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                selectable: true,
+                select: function(info) {
+                    var eventTitle = prompt('Introduceți titlul evenimentului:');
+                    if (eventTitle) {
+                        calendar.addEvent({
+                            title: eventTitle,
+                            start: info.startStr,
+                            end: info.endStr
+                        });
+                    }
+                    calendar.unselect(); // Deselectează datele după adăugarea evenimentului
+                },
+                events: [
+                    {
+                        title: 'Eveniment Exemplar',
+                        start: '2024-06-15',
+                        end: '2024-06-17'
+                    }
+                ]
+            });
+            calendar.render();
         });
-        calendar.render();
-      });
-
     </script>
 </head>
 <body>
@@ -36,25 +53,22 @@
     <div id='calendar'></div>
 
     <footer>
-      <div id="footerContainer">
-          <div class="side-info">
-            <!-- Informații laterale stânga -->
-            <p>&copy; 2024 Adiaconitei Andrei</p>
-          </div>
-          <div class="main-info">
-            <!-- Informații principale -->
-            <p>Mulțumim îndrumătorului nostru, <strong>Constantin Constantinescu</strong>, pentru ajutorul său în crearea acestui proiect.</p>
-          </div>
-          <div class="side-info">
-            <!-- Informații laterale dreapta -->
-            <p>Susținători:</p>
-            <ul>
-              <a href="http://www.csac.ro">csac.ro</a>
-              <a href="https://scanstart.ro/">scanstart.ro</a>
-              <a href="https://graffino.com/">graffino.com</a>
-            </ul>
-          </div>
+        <div id="footerContainer">
+            <div class="side-info">
+                <p>&copy; 2024 Adiaconitei Andrei</p>
+            </div>
+            <div class="main-info">
+                <p>Mulțumim îndrumătorului nostru, <strong>Constantin Constantinescu</strong>, pentru ajutorul său în crearea acestui proiect.</p>
+            </div>
+            <div class="side-info">
+                <p>Susținători:</p>
+                <ul>
+                    <li><a href="http://www.csac.ro">csac.ro</a></li>
+                    <li><a href="https://scanstart.ro/">scanstart.ro</a></li>
+                    <li><a href="https://graffino.com/">graffino.com</a></li>
+                </ul>
+            </div>
         </div>
-  </footer>
+    </footer>
 </body>
 </html>
